@@ -17,6 +17,7 @@ CDV.XocializeScanner = {
 		EAN8Code		: false,
 		Code93Code		: false,
 		Code128Code		: false,
+		DataMatrix		: false,
 		AztecCode		: false
 		
 	};
@@ -67,6 +68,9 @@ CDV.XocializeScanner = {
 				break;
 				case "AztecCode":
 					bcarray.push('org.iso.Aztec');
+				break;
+				case "DataMatrix":
+					bcarray.push('org.iso.DataMatrix');
 				break;
 			}
 		  
