@@ -88,4 +88,6 @@ params.QRCode = false;
 
 A list of available barcode types:
 
-PDF417Code, QRCode, EAN13Code, UPCECode, Code39Code, Code39Mod43Code, EAN8Code, Code93Code, Code128Code, AztecCode
+PDF417Code, QRCode, EAN13Code, UPCECode, Code39Code, Code39Mod43Code, EAN8Code, Code93Code, Code128Code, AztecCode, DataMatrix
+
+iOS 8 is required for DataMatrix barcodes
