@@ -78,14 +78,25 @@ CDV.XocializeScanner = {
 		
 		}
 	}
+	/// disable click through
+	var disableClickThrough = function(){
+		document.body.style.pointerEvents = 'none';
+		document.body.style.userSelect = 'none';
+	}
+	/// enable click through
+	var enableClickThrough = function(){
+		document.body.style.pointerEvents = 'auto';
+		document.body.style.userSelect = 'auto';
+	}
 	
+	disableClickThrough();
 	cordova.exec(function callback(data) {
-                
+                		enableClickThrough();
 				if(typeof cb == 'function'){ cb.call(this,data); }
-            
 			},
 			function errorHandler(err){
-				
+				console.warn(err);
+				enableClickThrough();
 			},'XocializeScanner','cordovaGetBC',bcarray);
   }
 	
