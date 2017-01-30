@@ -90,4 +90,4 @@ A list of available barcode types:
 
 PDF417Code, QRCode, EAN13Code, UPCECode, Code39Code, Code39Mod43Code, EAN8Code, Code93Code, Code128Code, AztecCode, DataMatrix, Interleaved2of5, and ITF14
 
-iOS 8 is required for DataMatrix, Interleaved2of5, and ITF14 barcodes
+iOS 8 or above is required for DataMatrix, Interleaved2of5, and ITF14 barcodes
