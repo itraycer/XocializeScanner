@@ -18,6 +18,8 @@ CDV.XocializeScanner = {
 		Code93Code		: false,
 		Code128Code		: false,
 		DataMatrix		: false,
+		Interleaved2of5		: false,
+		ITF14		: false,
 		AztecCode		: false
 		
 	};
@@ -71,6 +73,12 @@ CDV.XocializeScanner = {
 				break;
 				case "DataMatrix":
 					bcarray.push('org.iso.DataMatrix');
+				break;
+				case "Interleaved2of5":
+					bcarray.push('org.ansi.Interleaved2of5');
+				break;
+				case "ITF-14":
+					bcarray.push('org.gs1.ITF14');
 				break;
 			}
 		  
