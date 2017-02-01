@@ -4,7 +4,7 @@ var cordova = window.cordova || window.Cordova;
 
 CDV.XocializeScanner = {
 
-	getBC: function(params,cb) {
+	getBC: function(params,cb, bottomText) {
 	  
 	var settings = {
 		
@@ -96,7 +96,9 @@ CDV.XocializeScanner = {
 		document.body.style.pointerEvents = 'auto';
 		document.body.style.userSelect = 'auto';
 	}
-	
+	if(!bottomText){
+        bottomText = "Scanning";
+    }
 	disableClickThrough();
 	cordova.exec(function callback(data) {
                 		enableClickThrough();
@@ -105,7 +107,7 @@ CDV.XocializeScanner = {
 			function errorHandler(err){
 				console.warn(err);
 				enableClickThrough();
-			},'XocializeScanner','cordovaGetBC',bcarray);
+			},'XocializeScanner','cordovaGetBC',[bcarray, bottomText]);
   }
 	
 }

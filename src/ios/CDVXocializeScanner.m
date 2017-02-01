@@ -60,7 +60,7 @@
     _label.backgroundColor = [UIColor colorWithWhite:0.15 alpha:0.65];
     _label.textColor = [UIColor whiteColor];
     _label.textAlignment = NSTextAlignmentCenter;
-    _label.text = @"Scanning";
+    _label.text = command.arguments[1];
     [self.webView.superview addSubview:_label];
     
     _session = [[AVCaptureSession alloc] init];
@@ -92,7 +92,7 @@
     
     _callback = command.callbackId;
     
-    _barCodeTypes = command.arguments;
+    _barCodeTypes = command.arguments[0];
     
 }
 
